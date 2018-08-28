@@ -1,0 +1,161 @@
+.cursor-pointer {
+  cursor: pointer
+}
+
+.centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.required {
+  &::after {
+    content: ' *';
+    color: #dc3545
+  }
+}
+
+input.ghost {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+}
+
+.min-width-150 {
+  min-width: 150px
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+.flex-auto {
+  flex: auto
+}
+
+.dropdown-item {
+  cursor: pointer
+}
+
+textarea {
+  resize: none;
+}
+
+.min-heigh-min-content {
+  min-height: min-content
+}
+
+.modal-xl {
+  max-width: 95%;
+}
+
+.btn {
+  font-size: 12px;
+  font-weight: 600;
+  &.btn-white {
+    color: #444;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    &:hover {
+      box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
+
+i.fal,
+i.fab,
+i.fas {
+  width: 20px;
+  text-align: center;
+  &.w-unset {
+    width: unset;
+  }
+}
+
+.custom-control-label {
+  margin-top: 2px
+}
+
+.scrollbar {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+  }
+}
+
+input {
+  &[type=text] {
+    height: 32px;
+    color: #222 !important;
+    font-size: 13px !important;
+    border: solid 1px #dddddd !important;
+    &::placeholder {
+      color: #888;
+      font-size: 13px;
+    }
+    &:not([value=""]) {
+      color: #222;
+    }
+  }
+}
+
+textarea {
+  color: #222 !important;
+  font-size: 13px !important;
+  border-radius: 3px;
+  resize: none;
+  &::placeholder {
+    color: #888;
+    font-size: 13px;
+  }
+  &:focus {
+    color: #222;
+    font-size: 13px !important;
+  }
+}
+
+select.form-control {
+  height: 32px !important;
+  color: #222;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.col-form-label,
+label {
+  word-wrap: initial;
+}
+
+.custom-control-label {
+  cursor: pointer;
+}
+
+.breadcrumb {
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  align-items: center;
+  .breadcrumb-item {
+    font-weight: 600;
+    color: #1583bc;
+    & a:hover {
+      text-decoration: none;
+      color: #1583bc;
+    }
+    &.active {
+      color: #444;
+    }
+  }
+}

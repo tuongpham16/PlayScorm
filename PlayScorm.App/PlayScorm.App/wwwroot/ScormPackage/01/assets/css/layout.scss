@@ -1,0 +1,219 @@
+body {
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+.card {
+  background-color: #e5e5e6;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  &.border-card {
+    border: 1px solid #fff;
+  }
+  .card-header {
+    font-size: 15px;
+    color: #444;
+    border-bottom: 0;
+    padding: 0px 10px;
+    background-color: #e5e5e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .card-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #e5e5e6;
+    margin: 0 8px 20px;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #eee;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #aaa;
+      border-radius: 10px;
+    }
+    &.no-box {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  .card-footer {
+    background-color: #e5e5e6;
+    border-top: 0;
+    padding: 0 8px 20px
+  }
+}
+
+.layout {
+  .left-menu,
+  .main-content,
+  .right-menu {
+    margin-bottom: 1rem;
+  }
+}
+
+.card {
+  height: 100%;
+  .card-item {
+    font-weight: normal;
+    &.box-shadow {
+      padding: 15px;
+      display: block;
+      box-shadow: 0 1px 0 0 #eeeeee;
+    }
+    &.individual {
+      padding: 10px;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+    &.selected {
+      background-color: #1583bc;
+      color: #fff
+    }
+  }
+}
+
+.dropdown-menu {
+  .dropdown-item {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    &[disabled] {
+      opacity: .65;
+      pointer-events: none;
+    }
+    &:active {
+      color: #fff;
+      i.fal {
+        color: #fff !important
+      }
+    }
+  }
+}
+
+.modal-content {
+  background-color: #e5e5e6;
+  .modal-header {
+    background-color: #e5e5e6;
+    border-bottom: none;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    .modal-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #444;
+    }
+  }
+  .modal-body {
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+    color: #222;
+    margin: 0 8px;
+    padding: 10px;
+    border-radius: 3px;
+    &.no-box {
+      padding: 0 1rem;
+      margin: 0;
+      background-color: transparent
+    }
+  }
+  .modal-footer {
+    background-color: #e5e5e6;
+    border-top: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .layout {
+    display: flex;
+    height: calc(100vh - 160px);
+    .left-menu {
+      width: 30%;
+      padding-right: .5rem;
+      margin-bottom: 0;
+    }
+    .main-content {
+      flex: auto;
+      margin-bottom: 0;
+    }
+    .right-menu {
+      width: 30%;
+      padding-left: .5rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .layout {
+    .left-menu,
+    .right-menu {
+      width: 25%;
+    }
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .layout {
+    .left-menu,
+    .right-menu {
+      width: 20%;
+    }
+  }
+}
+
+.nav.navigation-tabs {
+  border-bottom: 1px solid #eee;
+  .nav-link {
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    &.active {
+      border-bottom: 3px solid #1583bc;
+      border-radius: 3px;
+      color: #1583bc;
+    }
+  }
+}
+.layout-title{
+  color: #1583bc;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  small{ display: block; font-size: 12px;}
+}
+.preview-title{
+  font-size: 48px;
+  font-weight: 300;
+  color: #222;
+  text-align: center;
+}
+.preview-desc{
+  font-size: 24px;
+  color: #555;
+  line-height: 1.67;
+  text-align: center;
+}
+.preview-txt{
+  font-size: 18px;
+  color: #888;
+  line-height: 1.67;
+  text-align: left;
+}

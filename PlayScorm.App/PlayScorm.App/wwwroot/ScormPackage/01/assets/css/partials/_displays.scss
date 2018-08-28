@@ -1,0 +1,81 @@
+.a-wrapper {
+  @extend .container-fluid,
+  .position-fixed,
+  .h-100,
+  .w-100,
+  .d-flex,
+  .align-items-center;
+  background: #000;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.wrapper {
+  @extend .container-fluid,
+  .h-100,
+  .p-0;
+}
+
+.d-flex-column {
+  @extend .d-flex,
+  .flex-column;
+}
+
+.d-flex-center {
+  @extend .d-flex,
+  .align-items-center;
+}
+
+.d-flex-between-center {
+  @extend .d-flex-center,
+  .justify-content-between;
+}
+
+.d-flex-around-center {
+  @extend .d-flex-center,
+  .justify-content-around;
+}
+
+.d-flex-column-center {
+  @extend .d-flex-column,
+  .align-items-center;
+}
+
+.d-flex-column-between {
+  @extend .d-flex-column,
+  .justify-content-between;
+}
+
+.d-flex-column-between-center {
+  @extend .d-flex-column,
+  .align-items-center,
+  .justify-content-between;
+}
+
+.d-flex-column-around-center {
+  @extend .d-flex-column,
+  .align-items-center,
+  .justify-content-around;
+}
+
+.d-flex-column-around {
+  @extend .d-flex-column,
+  .justify-content-around;
+}
+
+$flexs: 1 2 3 4 5 6 7 8 9 10 11 12;
+@each $flex in $flexs {
+  .flex-#{$flex} {
+    flex: #{$flex};
+  }
+  .d-flex-#{$flex} {
+    display: flex;
+    flex: #{$flex};
+  }
+  .d-flex-column-#{$flex} {
+    display: flex;
+    flex-direction: column;
+    flex: #{$flex};
+  }
+}

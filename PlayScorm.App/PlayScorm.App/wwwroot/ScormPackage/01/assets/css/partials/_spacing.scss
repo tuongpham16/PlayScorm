@@ -1,0 +1,114 @@
+$spaces: 0 5 10 15 20 25 30 35 40 45 50;
+$borders: 1 2 3 4 5 6 7 8 9 10;
+//== margin
+.ml-auto {
+  margin-left: auto;
+}
+
+@each $space in $spaces {
+  .m-#{$space} {
+    margin: #{$space}px;
+  }
+} //** margin-top
+@each $space in $spaces {
+  .mt-#{$space} {
+    margin-top: #{$space}px !important;
+  }
+} //** margin-left
+@each $space in $spaces {
+  .ml-#{$space} {
+    margin-left: #{$space}px !important;
+  }
+} //** margin-right
+@each $space in $spaces {
+  .mr-#{$space} {
+    margin-right: #{$space}px !important;
+  }
+} //** margin-bottom
+@each $space in $spaces {
+  .mb-#{$space} {
+    margin-bottom: #{$space}px !important;
+  }
+} //** margin-top-bottom
+@each $space in $spaces {
+  .m-t-b-#{$space} {
+    margin-bottom: #{$space}px;
+    margin-top: #{$space}px;
+  }
+  .my-#{$space} {
+    margin-bottom: #{$space}px;
+    margin-top: #{$space}px;
+  }
+} //** margin-left-right
+@each $space in $spaces {
+  .m-l-r-#{$space} {
+    margin-left: #{$space}px;
+    margin-right: #{$space}px;
+  }
+  .mx-#{$space} {
+    margin-left: #{$space}px;
+    margin-right: #{$space}px;
+  }
+}
+
+//==padding ( exp: p-10 )
+@each $space in $spaces {
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
+} //**padding-top ( exp: p-10 )
+@each $space in $spaces {
+  .pt-#{$space} {
+    padding-top: #{$space}px;
+  }
+} //**padding-right ( exp: p-10 )
+@each $space in $spaces {
+  .pr-#{$space} {
+    padding-right: #{$space}px !important;
+  }
+} //**padding-bottom ( exp: p-10 )
+@each $space in $spaces {
+  .pb-#{$space} {
+    padding-bottom: #{$space}px !important;
+  }
+} //**padding-left ( exp: p-10 )
+@each $space in $spaces {
+  .pl-#{$space} {
+    padding-left: #{$space}px !important;
+  }
+} //**padding-left-right ( exp: p-10 )
+@each $space in $spaces {
+  .p-l-r-#{$space} {
+    padding-left: #{$space}px;
+    padding-right: #{$space}px;
+  }
+  .px-#{$space} {
+    padding-left: #{$space}px;
+    padding-right: #{$space}px;
+  }
+}
+
+@each $space in $spaces {
+  .p-t-b-#{$space} {
+    padding-top: #{$space}px;
+    padding-bottom: #{$space}px;
+  }
+  .py-#{$space} {
+    padding-top: #{$space}px;
+    padding-bottom: #{$space}px;
+  }
+}
+
+// border-width
+@each $border in $borders {
+  .border-#{$border} {
+    border:#{$border}px;
+  }
+}
+
+// border-radius
+@each $border in $borders {
+  .border-r-#{$border} {
+    border-radius:#{$border}px;
+  }
+}

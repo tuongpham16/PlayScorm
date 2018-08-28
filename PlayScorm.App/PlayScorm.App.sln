@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayScorm.App", "PlayScorm.App\PlayScorm.App.csproj", "{C1EE508B-9BBC-4E72-990A-81B6732970E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1EE508B-9BBC-4E72-990A-81B6732970E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1EE508B-9BBC-4E72-990A-81B6732970E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1EE508B-9BBC-4E72-990A-81B6732970E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1EE508B-9BBC-4E72-990A-81B6732970E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBF75DA7-2243-44A3-AEAA-5B0A1B49CBF2}
+	EndGlobalSection
+EndGlobal
