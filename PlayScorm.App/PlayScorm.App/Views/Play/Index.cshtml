@@ -10,14 +10,35 @@
 </style>
 <h2>Index</h2>
 
+<button type="button" id="btnPlayScorm">Play Scorm</button>
+
 <iframe id="contentFrame" src="~/ScormPackage/01/index.html"></iframe>
+
+
+<button type="button" id="btnTest">test Scorm</button>
 
 <script src="~/js/jquery.min.js"></script>
 <script src="~/js/SCORM_API_wrapper.js"></script>
+<script src="~/js/scorm-adapter.js"></script>
 <script src="~/js/scorm-run.js"></script>
 <script>
     $(document).ready(function () {
         ScormApi.play()
+        var api = new ScormAPIImplement('1111', '1111', '/ScormPackage/01/index.html')
+        window.API = api;
+        window.API_1484_11 = api;
+        api.LMSSetValue('cmi.completion_status', '1222222222aaa');
+
+        $("#btnPlayScorm").click(function () {
+            var windowNew = window.open("/ScormPackage/01/index.html")
+
+        })
+
+        $("#btnTest").click(function () {
+            console.log(api.LMSGetValue('cmi.completion_status'));
+            api.LMSSetValue('cmi.completion_status', 'completed1111 ');
+
+        })
     })
     
 </script>
