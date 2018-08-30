@@ -37,8 +37,8 @@
     ScormAPIImplement.prototype.Initialize = function () {
         try {
             this.CallLog('Initialize');
-            var frameUrl = $('#scorm-frame').attr('src');
-            this.currentResourceUri = frameUrl.split(this.packageBaseUrl)[1];
+            $('#scorm-frame').attr('src', this.packageBaseUrl);
+            this.currentResourceUri = this.packageBaseUrl;
             this.StartTimer();
             return 'true';
         }
@@ -54,13 +54,13 @@
     };
 
     ScormAPIImplement.prototype.GetValue = function (element) {
-        var itemState = this.state.item_states.filter(t => t.resource_uri === this.currentResourceUri)[0];
+        var itemState = this.state.item_states[0];
         var value = readByPath(itemState, element);
         return value || '';
     };
 
     ScormAPIImplement.prototype.SetValue = function (element, value) {
-        var itemState = this.state.item_states.filter(t => t.resource_uri === this.currentResourceUri)[0];
+        var itemState = this.state.item_states[0];
         if (!itemState) {
             itemState = {
                 resource_uri: this.currentResourceUri
@@ -81,9 +81,9 @@
             url: '/api/state',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify({
-                package_id: this.packageId,
-                reference_id: this.referenceId,
-                item_states: this.state.item_states
+                packageId: this.packageId,
+                referenceId: this.referenceId,
+                itemStates: this.state.item_states
             }),
             dataType: 'json',
             success: success
